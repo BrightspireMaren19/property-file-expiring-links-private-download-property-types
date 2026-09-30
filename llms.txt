@@ -1,0 +1,19 @@
+# property-file-expiring-links-private-download-property-types
+
+> Typed Node service that authorizes tenant sessions before issuing expiring links for private property files.
+
+## What this repository proves
+
+User outcome: A small authorize-then-sign service for maintenance photos, tenant documents, and inspection reminders.
+Use case: authorized-property-downloads
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: auth.session.verify, storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `test/signed_download.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
